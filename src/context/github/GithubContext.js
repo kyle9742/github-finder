@@ -11,8 +11,8 @@ export const GithubProvider = ({ children }) => {
   // const [loading, setLoading] = useState(true);
 
   const initialState = {
-    user: [],
-    loading: true,
+    users: [],
+    loading: false,
   };
   const [state, dispatch] = useReducer(githubReducer, initialState);
 
@@ -29,8 +29,9 @@ export const GithubProvider = ({ children }) => {
     // setLoading(false);
 
     dispatch({
-      type: "GET_USERS",
+      type: 'GET_USERS',
       payload: data,
+      loading: false
     });
   };
 
