@@ -9,7 +9,7 @@ function RepoItem({ repo }) {
 		<div className='mb-2 rounded-md card bg-base-200 hover:bg-base-300'>
 			<div className='card-body'>
 				<h3 className='mb-2 text-xl font-semibold'>
-					<a href={html_url}>
+					<a href={html_url} rel='noreferrer' target="_blank">
 						<FaLink className='inline mr-1' /> {name}
 					</a>
 				</h3>
